@@ -12,7 +12,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'mysql2', '0.3.11'
-  gem  "spud_admin", :path => "../spud_core_admin"
+  gem  "spud_core", :path => "../spud_core_admin"
   gem  "spud_cms", :path => "../spud_cms"
   gem 'rspec-rails', '2.8.1'
 end
