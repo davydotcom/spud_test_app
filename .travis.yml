@@ -1,3 +1,6 @@
+language: ruby
+before_install: bundle exec rake db:create
+before_install: bundle exec rake db:migrate
 rvm:
   - 1.9.2
   - 1.9.3
