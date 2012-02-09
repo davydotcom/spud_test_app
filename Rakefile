@@ -6,9 +6,4 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 require 'rake/testtask'
 SpudTestApp::Application.load_tasks
-Rake::TestTask.new(:test) do |t|
-	t.test_files = FileList['test/test*.rb']
-	t.verbose = true
-	t.libs << 'lib' << 'test'
-end
 task :default => [:spec]
