@@ -4,5 +4,6 @@ rvm:
   - 1.9.3
 before_script:
   - "mysql -e 'create database spud_test_app_test;'"
+  - "bundle exec rake db:migrate"
 
 
