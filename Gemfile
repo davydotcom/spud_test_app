@@ -15,6 +15,7 @@ group :development, :test do
   gem 'mysql2', '0.3.11'
   gem  "spud_core", :git => "git://github.com/davydotcom/spud_core_admin.git"
   gem  "spud_cms", :git => "git://github.com/davydotcom/spud_cms.git"
+  gem  "spud_events", :git => "git://github.com/davydotcom/spud_events.git"
   gem 'rspec-rails', '2.8.1'
 end
 

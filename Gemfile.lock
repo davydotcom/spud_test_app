@@ -27,6 +27,11 @@ GIT
       rails (>= 3.2.0)
       will_paginate
 
+PATH
+  remote: /Users/ddeyoung/Projects/westlake/spud/spud_events
+  specs:
+    spud_events (0.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -162,4 +167,5 @@ DEPENDENCIES
   shoulda!
   spud_cms!
   spud_core!
+  spud_events!
   uglifier

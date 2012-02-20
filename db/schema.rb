@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120129183053) do
+ActiveRecord::Schema.define(:version => 20120220160229) do
 
   create_table "spud_admin_permissions", :force => true do |t|
     t.integer  "user_id"
@@ -20,6 +20,28 @@ ActiveRecord::Schema.define(:version => 20120129183053) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "spud_calendar_events", :force => true do |t|
+    t.integer  "spud_calendar_id"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.boolean  "all_day"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "spud_calendar_events", ["spud_calendar_id"], :name => "index_spud_calendar_events_on_spud_calendar_id"
+
+  create_table "spud_calendars", :force => true do |t|
+    t.string   "title"
+    t.binary   "color",      :limit => 6
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  add_index "spud_calendars", ["title"], :name => "index_spud_calendars_on_title"
 
   create_table "spud_categories", :force => true do |t|
     t.string   "name"
